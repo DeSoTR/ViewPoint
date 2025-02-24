@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 
-<body>
+<body class="bg-light">
     <div class="container">
         <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom container">
             <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
@@ -24,14 +24,23 @@
     </div>
 
     <main>
-        <label class="product-name text-muted">43" Телевизор SunWind SUN-LED43XU400, 4K Ultra HD, черный, СМАРТ ТВ, YaOS</label>
-        <div class="layout-grid border-bottom">
-            <img src="" class="d-block product-image" id="tv-image">
-            <div class="buy-field">
-                <label id="price">25000</label>
-                <button class="btn btn-success" id="add-to-cart" type="button">В корзину</button>
+        <div class="product-header">
+            <h1 class="product-title">43" Телевизор SunWind SUN-LED43XU400, 4K Ultra HD, черный, СМАРТ ТВ, YaOS</h1>
+        </div>
+        
+        <div class="product-layout">
+            <div class="product-image-container">
+                <img src="" class="product-image" id="tv-image" alt="Product Image">
+            </div>
+            <div class="product-buy-container">
+                <div class="price-tag" id="price">25000</div>
+                <button class="btn btn-primary btn-buy" id="add-to-cart" type="button">
+                    <i class="bi bi-cart-plus"></i>
+                    Добавить в корзину
+                </button>
             </div>
         </div>
+
         <div class="product-info-container">
             <h3 class="product-info-title">Информация о продукте</h3>
             <div class="product-info-content" id="product-info"></div>
