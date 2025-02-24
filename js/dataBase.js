@@ -111,6 +111,14 @@ function addProduct(product) {
   };
 }
 
+function getCarouselItemCount() {
+  const width = window.innerWidth;
+  if (width <= 576) return 2;
+  if (width <= 768) return 3;
+  if (width <= 992) return 4;
+  return 5;
+}
+
 function displayProducts() {
   if (!db) {
     console.error('Database not initialized');
@@ -126,7 +134,7 @@ function displayProducts() {
     const productList = document.getElementById('product-list');
     
     if (productList) {
-      productList.innerHTML = ''; // Clear the list
+      productList.innerHTML = '';
 
       products.forEach((product) => {
         const productItem = document.createElement('button');
@@ -147,12 +155,12 @@ function displayProducts() {
     const productCarousel = document.getElementsByClassName('carousel-item-list');
 
     if (productCarousel.length > 0) {
-      const maxCarouselItems = 5;
+      const maxCarouselItems = getCarouselItemCount();
 
       for (let j = 0; j < 2; j++) {
         productCarousel[j].innerHTML = '';
         for (let i = 0; i < maxCarouselItems; i++) {
-          const product = products[9 - i];
+          const product = products[9 - i - maxCarouselItems*j];
           if (product) {
             const productItemCarousel = document.createElement('li');
             productItemCarousel.className = 'product rounded';
@@ -174,3 +182,7 @@ function displayProducts() {
     console.error('Error fetching products:', event.target.error);
   };
 }
+
+window.addEventListener('resize', () => {
+  displayProducts();
+});
