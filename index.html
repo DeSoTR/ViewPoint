@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ViewPoint</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom container">
+            <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <img src="images/Logo.png" alt="ViewPoint" width="200">
+            </a>
+            
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="contact.html" class="nav-link">Контакты</a></li>
+                <li class="nav-item"><a href="cart.html" class="nav-link">Корзина</a></li>
+            </ul>
+        </header>
+    </div>
+
+    <main>
+        <div class="border outer-carousel rounded">
+            <h3 style="padding: 5px 0 5px 100px;">Лидеры продаж</h3>
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner w-100" >
+                    <div class="carousel-item active">
+                        <ul class="carousel-item-list">
+                        </ul>
+                    </div>
+                    <div class="carousel-item">
+                        <ul class="carousel-item-list">
+                        </ul>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Предыдущий</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Следующий</span>
+                </button>
+            </div>
+        </div>
+        
+        <h2 style="margin: 25px;">Все товары</h2>
+
+        <div class="product-grid" id="product-list">
+            <div class="product">
+                <a href="product.html">
+                    <img src="images/43 SunWind 4k.webp" class="d-block" alt="...">
+                    <p class="tv-name"> 43" Телевизор SunWind SUN-LED43XU400, 4K Ultra HD, черный, СМАРТ ТВ, YaOS</p>
+                    <p class="tv-price"> 22 000 </p>
+                </a>
+            </div>
+            <div>
+                <button class="product" onclick="location.href='product.html?productId=1'">
+                    <img src="images/1.webp" class="d-block" alt="...">
+                    <p class="tv-name"> 43" Телевизор SunWind SUN-LED43XU400, 4K Ultra HD, черный, СМАРТ ТВ, YaOS</p>
+                    <p class="tv-price"> 22 000 </p>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        Данный сайт был создан в качестве учебного проекта для ВУЗа. <br>
+        Автор данного сайта Иванов Даниил.
+    </footer>
+
+</body>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/dataBase.js"></script>
+
+</html>

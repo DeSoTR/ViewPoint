@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ViewPoint</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom container">
+            <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <img src="images/Logo.png" alt="ViewPoint" width="200">
+            </a>
+            
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="contact.html" class="nav-link">Контакты</a></li>
+                <li class="nav-item"><a href="cart.html" class="nav-link">Корзина</a></li>
+            </ul>
+        </header>
+    </div>
+
+    <main>
+        <h1 style="padding: 10px 50px;">Корзина</h1>
+        <div id="cart-items"></div>
+        <p id="cart-total">Всего: 0.00 ₽</p>
+        
+        <div class="payment-form">
+            <form id="checkout-form" class="needs-validation" novalidate>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email адрес</label>
+                    <input type="email" class="form-control" id="email" required>
+                    <div class="invalid-feedback">
+                        Пожалуйста, введите корректный email адрес.
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="payment-method" class="form-label">Способ оплаты</label>
+                    <select class="form-select" id="payment-method" required>
+                        <option value="">Выберите способ оплаты...</option>
+                        <option value="card">Банковская карта</option>
+                        <option value="qr">QR-код СБП</option>
+                        <option value="cash">Наличные при получении</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Пожалуйста, выберите способ оплаты.
+                    </div>
+                </div>
+                <button class="btn btn-success" id="checkout" type="submit">Перейти к оплате</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        Данный сайт был создан в качестве учебного проекта для ВУЗа. <br>
+        Автор данного сайта Иванов Даниил.
+    </footer>
+
+<script src="js/cart.js"></script>
+</body>
+
+</html>

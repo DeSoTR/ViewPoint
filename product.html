@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ViewPoint</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom container">
+            <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <img src="images/Logo.png" alt="ViewPoint" width="200">
+            </a>
+            
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="contact.html" class="nav-link">Контакты</a></li>
+                <li class="nav-item"><a href="cart.html" class="nav-link">Корзина</a></li>
+            </ul>
+        </header>
+    </div>
+
+    <main>
+        <label class="product-name text-muted">43" Телевизор SunWind SUN-LED43XU400, 4K Ultra HD, черный, СМАРТ ТВ, YaOS</label>
+        <div class="layout-grid border-bottom">
+            <img src="" class="d-block product-image" id="tv-image">
+            <div class="buy-field">
+                <label id="price">25000</label>
+                <button class="btn btn-success" id="add-to-cart" type="button">В корзину</button>
+            </div>
+        </div>
+        <div class="product-info-container">
+            <h3 class="product-info-title">Информация о продукте</h3>
+            <div class="product-info-content" id="product-info"></div>
+        </div>
+    </main>
+
+    <footer>
+        Данный сайт был создан в качестве учебного проекта для ВУЗа. <br>
+        Автор данного сайта Иванов Даниил.
+    </footer>
+
+<script src="js/product.js"></script>
+</body>
+
+</html>
