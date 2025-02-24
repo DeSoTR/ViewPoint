@@ -15,7 +15,7 @@ request.onsuccess = function (event) {
 
         if (product) {
             document.getElementById('tv-image').setAttribute("src", "images/" + product.id + ".webp");
-            document.getElementById('tv-name').innerHTML = product.name;
+            document.getElementById('tv-name').textContent = product.name;
             
             const descriptionLines = product.description.split('\n');
             const formattedDescription = descriptionLines.map(line => {
