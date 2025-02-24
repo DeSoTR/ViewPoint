@@ -15,8 +15,8 @@ request.onsuccess = function (event) {
 
         if (product) {
             document.getElementById('tv-image').setAttribute("src", "images/" + product.id + ".webp");
+            document.getElementById('tv-name').innerHTML = product.name;
             
-            // Format the product description
             const descriptionLines = product.description.split('\n');
             const formattedDescription = descriptionLines.map(line => {
                 const [key, value] = line.split(': ');
@@ -25,7 +25,7 @@ request.onsuccess = function (event) {
                     <span class="info-value">${value}</span>
                 </div>`;
             }).join('');
-            
+
             document.getElementById('product-info').innerHTML = formattedDescription;
             document.getElementById('price').textContent = `Цена: ${product.price} \u20bd`;
 
