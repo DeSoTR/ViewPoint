@@ -114,8 +114,8 @@ function addProduct(product) {
 function getCarouselItemCount() {
   const width = window.innerWidth;
   if (width <= 576) return 2;
-  if (width <= 768) return 3;
-  if (width <= 992) return 4;
+  if (width <= 820) return 3;
+  if (width <= 1265) return 4;
   return 5;
 }
 
